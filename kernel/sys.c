@@ -1246,7 +1246,7 @@ SYSCALL_DEFINE1(newuname, struct new_utsname __user *, name)
 
 	down_read(&uts_sem);
 	memcpy(&tmp, utsname(), sizeof(tmp));
-	#ifndef CONFIG_FAKE_UNAME_NONE
+#ifndef CONFIG_FAKE_UNAME_NONE
 	if (!strncmp(current->comm, "bpfloader", 9) ||
 		!strncmp(current->comm, "netbpfload", 10) ||
 		!strncmp(current->comm, "netd", 4) ||
