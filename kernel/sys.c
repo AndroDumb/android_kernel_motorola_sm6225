@@ -1268,7 +1268,6 @@ SYSCALL_DEFINE1(newuname, struct new_utsname __user *, name)
 #endif
 		pr_debug("fake uname: %s/%d release=%s\n",
 			current->comm, current->pid, tmp.release);
-		}
 	}
 #endif
 	up_read(&uts_sem);
